@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
+});
+route::get('/index', function(){
+    return view('user');
 });
