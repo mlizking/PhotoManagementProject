@@ -1,1 +1,1 @@
-@extends('masterIndex')
+@extends('layouts.masterIndex')
