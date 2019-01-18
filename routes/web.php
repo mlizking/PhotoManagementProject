@@ -14,7 +14,10 @@
 Route::get('/', function () {
     return view('gg');
 });
-Route::get('/login', 'MainController@index');
-Route::post('/login/checklogin', 'MainController@checklogin');
-Route::get('/login/successlogin', 'MainController@successlogin');
-Route::get('/login/logout', 'MainController@logout');
+Route::get('/register', function () {
+    return view('userRegister');
+});
+Route::get('/login', 'LoginController@index');
+Route::post('/login/checklogin', 'LoginController@checklogin');
+Route::get('/login/successlogin', 'LoginController@successlogin');
+Route::get('/login/logout', 'LoginController@logout');

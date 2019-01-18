@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Validator;
 use Auth;
 
-class MainController extends Controller
+class LoginController extends Controller
 {
     function index(){
         return view('userLogin');
