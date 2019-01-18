@@ -14,9 +14,7 @@
 Route::get('/', function () {
     return view('gg');
 });
-route::get('/index', function(){
-    return view('gg');
-});
-route::get('/login', function(){
-    return view('userLogin');
-});
+Route::get('/login', 'MainController@index');
+Route::post('/login/checklogin', 'MainController@checklogin');
+Route::get('/login/successlogin', 'MainController@successlogin');
+Route::get('/login/logout', 'MainController@logout');

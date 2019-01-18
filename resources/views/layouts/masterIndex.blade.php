@@ -14,7 +14,7 @@
 </head>
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="{{ url('index')}}">KEERAMERA</a>
+        <a class="navbar-brand" href="{{ url('/')}}">KEERAMERA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,10 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Top download</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('login') }}">Login</a>
+                    <a class="nav-link" href="{{ url('login') }}">Sign In</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -36,13 +33,14 @@
     </nav>
     @yield('content')
     
-        <footer class="page-footer font-small bg-dark fixed-bottom">
+        <footer class="footer bg-dark fixed-bottom">
             <div class="footer-copyright text-center py-3 text-light">KEERAMERA © 2019
                 <a href="https://www.facebook.com/keeramera/">facebook</a>
             </div>
         </footer>
     
 </body>
+
 <style>
     
     :root {
