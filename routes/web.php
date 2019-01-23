@@ -14,9 +14,15 @@
 Route::get('/', function () {
     return view('gg');
 });
-Route::get('/register', function () {
-    return view('userRegister');
-});
+
+// Route::get('/register', function () {
+//     return view('userRegister');
+// });
+
+Route::get('/register', 'RegistrationController@create');
+Route::post('register', 'RegistrationController@store');
+
+
 Route::get('/login', 'LoginController@index');
 Route::post('/login/checklogin', 'LoginController@checklogin');
 Route::get('/login/successlogin', 'LoginController@successlogin');
