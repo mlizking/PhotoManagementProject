@@ -20,6 +20,17 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            @if (isset(Auth::user()->email))
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <strong class="nav-link">{{ Auth::user()->email }}</strong>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/login/logout') }}">Logout</a>
+                </li>
+            </ul>
+            @else
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('login') }}">Login</a>
@@ -28,6 +39,8 @@
                     <a class="nav-link" href="{{ url('register') }}">Register</a>
                 </li>
             </ul>
+            @endif
+
             <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('gg');
+    return view('home');
 });
 
 // Route::get('/register', function () {
@@ -25,5 +25,5 @@ Route::post('register', 'RegistrationController@store');
 
 Route::get('/login', 'LoginController@index');
 Route::post('/login/checklogin', 'LoginController@checklogin');
-Route::get('/login/successlogin', 'LoginController@successlogin');
+// Route::get('/login/successlogin', 'LoginController@successlogin');
 Route::get('/login/logout', 'LoginController@logout');

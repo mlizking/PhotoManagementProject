@@ -24,16 +24,16 @@ class LoginController extends Controller
         );
 
         if (Auth::attempt($user_data)) {
-            return redirect('login/successlogin');
+            return redirect('/');
         }
         else {
             return back()->with('error', 'Wrong Login Details');
         }
     }
 
-    function successlogin(){
-        return view('userSuccesslogin');
-    }
+    // function successlogin(){
+    //     return view('/home');
+    // }
 
     function logout(){
         Auth::logout();
